@@ -4,10 +4,10 @@ namespace CadastroSeriesEFilmes.Interface
 {
   public interface IRepository<T>
   {
-    List<T> FindAll();
-    T FindById(int id);
-    void Insert(T entity);
-    void Delete(int id);
-    void Update(int id, T entity);
+    List<T> BuscarTodos();
+    T BuscarPeloId(int id);
+    void Inserir(T entity);
+    bool Deletar(int id);
+    bool Atualizar(int id, T entity);
   }
 }
