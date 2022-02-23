@@ -22,9 +22,7 @@ namespace CadastroSeriesEFilmes.Repository
     {
       using (var _context = new AppContext())
       {
-        var filme = _context.Filmes.FirstOrDefault(f => f.Id == id && f.IsExcluido == false);
-
-        return filme;
+        return _context.Filmes.FirstOrDefault(f => f.Id == id && f.IsExcluido == false);
       }
     }
 

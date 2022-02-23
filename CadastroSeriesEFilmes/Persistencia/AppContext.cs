@@ -5,17 +5,7 @@ namespace CadastroSeriesEFilmes.Persistencia
 {
   public class AppContext : DbContext
   {
-    private static bool _bancoCriado = false;
-
-    public AppContext()
-    {
-      /*if (!_bancoCriado)
-      {
-        _bancoCriado = true;
-        Database.EnsureDeleted();
-        Database.EnsureCreated();
-      }*/
-    }
+    public AppContext() { }
 
     public DbSet<EntidadeBase> Entidades { get; set; }
 
